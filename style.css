@@ -261,8 +261,36 @@ label.format-option {
 	font-size: 14px;
 }
 
+.order-actions {
+	grid-column: 1 / -1;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 12px;
+}
+
+.order-quantity-control {
+	width: 168px;
+}
+
+/*
+ * On wider screens, place image, details and actions in one row.
+ * Narrower screens keep the layout defined above this rule.
+ */
+@media (min-width: 800px) {
+	.order-item {
+		grid-template-columns: 64px minmax(0, 1fr) auto;
+		align-items: center;
+	}
+
+	.order-actions {
+		grid-column: auto;
+		flex-wrap: nowrap;
+	}
+}
+
 .order-remove {
-	min-height: 14px;
+	min-height: 48px;
 	padding: 8px 12px;
 	border: 1px solid #722f37;
 	border-radius: 6px;

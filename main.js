@@ -129,9 +129,59 @@ function renderOrder() {
 		row.querySelector(".order-packaging").textContent =
 			`Embalagem: ${format.label}`;
 
-		const packaging = item.quantity === 1 ? "embalagem" : "embalagens";
-		row.querySelector(".order-quantity").textContent =
-			`Quantidade: ${item.quantity} ${packaging}`;
+		const quantityInput = row.querySelector(".order-quantity");
+		const quantityLabel = row.querySelector(".order-quantity-label");
+		const decrease = row.querySelector(".order-decrease");
+		const increase = row.querySelector(".order-increase");
+
+		quantityInput.id = `pedido-${item.formatId}`;
+		quantityInput.value = item.quantity;
+
+		quantityLabel.htmlFor = quantityInput.id;
+
+		quantityInput.setAttribute(
+			"aria-label",
+			`Embalagem de ${product.name}, ${product.category}, ${format.label}`
+		);
+
+		decrease.disabled = item.quantity === 1;
+
+		function updateOrderQuantity() {
+			const quantity = quantityInput.valueAsNumber;
+
+			if (!quantityInput.reportValidity() ||
+				 !Number.isSafeInteger(quantity)) {
+				quantityInput.value = item.quantity;
+				feedback.textContent =
+					"Introduza uma quantidade inteira igual ou superior a 1.";
+				return;
+			}
+
+			item.quantity = quantity;
+			decrease.disabled = quantity === 1;
+
+			const saved = saveCart();
+
+			if (saved) {
+				feedback.textContent =
+					"Quantidade atualizada.";
+			} else {
+				feedback.textContent =
+					"Quantidade atualizada. Não foi possível guardar a alteração neste navegador.";
+			}
+		}
+
+		decrease.addEventListener("click", () => {
+			quantityInput.stepDown();
+			updateOrderQuantity();
+		});
+
+		increase.addEventListener("click", () => {
+			quantityInput.stepUp();
+			updateOrderQuantity();
+		});
+
+		quantityInput.addEventListener("change", updateOrderQuantity);
 
 		const removeButton = row.querySelector(".order-remove");
 		removeButton.setAttribute(
@@ -387,3 +437,19 @@ async function loadProducts() {
 }
 
 loadProducts();
+
+window.addEventListener("pageshow", (event) => {
+	// Only sync pages restored from the browser page cache.
+	if (!event.persisted || products.length === 0) {
+		return;
+	}
+
+	const savedCart = loadCart();
+
+	// Replace the in-memory contents with the latest saved order.
+	cart.splice(0, cart.length);
+	savedCart.forEach((item) => cart.push(item));
+
+	removeUnknownCartItems();
+	renderOrder();
+});

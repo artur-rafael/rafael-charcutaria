@@ -35,7 +35,34 @@
 							<p class="order-category"></p>
 							<h2 class="order-name"></h2>
 							<p class="order-packaging"></p>
-							<p class="order-quantity"></p>
+						</div>
+
+						<div class="order-actions">
+							<div class="quantity-control order-quantity-control">
+								<label class="order-quantity-label">Embalagens</label>
+
+								<div class="quantity-stepper">
+									<button
+										class="quantity-button order-decrease"
+										type="button"
+										aria-label="Diminuir quantidade"
+									>-</button>
+
+									<input
+										class="order-quantity"
+										type="number"
+										min="1"
+										step="1"
+										required
+									>
+
+									<button
+										class="quantity-button order-increase"
+										type="button"
+										aria-label="Aumentar quantidade"
+									>+</button>
+								</div>
+							</div>
 
 							<button class="order-remove" type="button">
 								Remover
