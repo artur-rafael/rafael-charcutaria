@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>O seu pedido - Rafael Charcutaria</title>
+
+		<link rel="stylesheet" href="style.css">
+		<script src="main.js" defer></script>
+	</head>
+
+	<body>
+		<header>
+			<a href="index.html">Rafael Charcutaria</a>
+		</header>
+
+		<main>
+			<section id="pedido" class="order-summary">
+				<h1 id="order-heading" tabindex="-1">O seu pedido</h1>
+
+				<p id="cart-feedback" role="status"></p>
+
+				<p id="order-empty">
+					Ainda não selecionou produtos.
+				</p>
+
+				<ul id="order-items"></ul>
+
+				<template id="order-item-template">
+					<li class="order-item">
+						<img class="order-image" width="64" height="64">
+
+						<div class="order-details">
+							<p class="order-category"></p>
+							<h2 class="order-name"></h2>
+							<p class="order-packaging"></p>
+							<p class="order-quantity"></p>
+
+							<button class="order-remove" type="button">
+								Remover
+							</button>
+						</div>
+					</li>
+				</template>
+
+				<a class="button" href="index.html#produtos">
+					Continuar a escolher produtos
+				</a>
+			</section>
+		</main>
+
+		<footer>
+			<p>Rafael Charcutaria, Lda.</p>
+			<p>
+				Distribuição de enchidos e produtos de charcutaria
+				para estabelecimentos comerciais.
+			</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,273 @@
+body {
+	margin: 0;
+	background-color: #faf7f2;
+	color: #302821;
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+}
+
+header,
+main,
+footer {
+	padding: 24px;
+}
+
+h1 {
+	color: #722f37;
+	line-height: 1.2;
+}
+
+.button {
+	display: inline-block;
+	padding: 12px 24px;
+	background-color: #722f37;
+	color: #ffffff;
+	border-radius: 8px;
+	text-decoration: none;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+}
+
+.button:not(:disabled):hover {
+	background-color: #57232a;
+}
+
+.button:focus-visible {
+	outline: 3px solid #722f37;
+	outline-offset: 4px;
+}
+
+.button:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.catalogue-search {
+	margin: 16px 0;
+}
+
+.catalogue-search label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+#product-search {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #e4d9ce;
+	border-radius: 8px;
+	background-color: #ffffff;
+	color: inherit;
+	font: inherit;
+}
+
+.category-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.category-filters button {
+	min-height: 48px;
+	padding: 8px 14px;
+	border: 1px solid #722f37;
+	border-radius: 8px;
+	background-color: #ffffff;
+	color: #722f37;
+	font: inherit;
+	cursor: pointer;
+}
+
+.category-filters button[aria-pressed="true"] {
+	background-color: #722f37;
+	color: #ffffff;
+}
+
+.category-filters button:focus-visible,
+#product-search:focus-visible {
+	outline: 3px solid #722f37;
+	outline-offset: 3px;
+}
+
+.product-card[hidden] {
+	display:none;
+}
+
+.product-grid {
+	display: grid;
+	gap: 24px;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.product-card {
+	padding: 24px;
+	background-color: #ffffff;
+	border: 1px solid #e4d9ce;
+	border-radius: 12px;
+}
+
+.product-card img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+.product-category {
+	margin: 16px 0 4px;
+	color: #6f6058;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.product-card h3 {
+	margin: 0 0 8px;
+}
+
+.product-formats {
+	margin: 16px 0;
+	padding: 0;
+	border: none;
+}
+
+.product-formats legend {
+	margin-bottom: 8px;
+	padding: 0;
+	font-weight: 600;
+}
+
+.format-options {
+	display: grid;
+	gap: 8px;
+}
+
+.format-option {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	min-height: 48px;
+	padding: 8px 12px;
+	box-sizing: border-box;
+	border: 1px solid #e4d9ce;
+	border-radius: 6px;
+}
+
+label.format-option {
+	cursor: pointer;
+}
+
+.format-option input {
+	margin: 0;
+	flex-shrink: 0;
+	accent-color: #722f37;
+}
+
+.product-actions {
+	margin-top: 16px;
+}
+
+.quantity-control label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.quantity-stepper {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.quantity-button {
+	width: 48px;
+	height: 48px;
+	flex-shrink: 0;
+	border: 1px solid #e4d9ce;
+	border-radius: 6px;
+	background-color: #faf7f2;
+	color: #722f37;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.quantity-button:disabled {
+	opacity: 0.45;
+	cursor: default;
+}
+
+.quantity-control input {
+	box-sizing: border-box;
+	flex: 1;
+	min-width: 0;
+	height: 48px;
+	padding: 8px;
+	border: 1px solid #e4d9ce;
+	border-radius: 6px;
+	font: inherit;
+	text-align: center;
+	appearance: textfield;
+}
+
+.add-to-cart {
+	width: 100%;
+	margin-top: 12px;
+}
+
+.order-summary {
+	margin-top: 48px;
+	padding: 24px;
+	background-color: #ffffff;
+	border: 1px solid #e4d9ce;
+	border-radius: 12px;
+}
+
+.order-summary li {
+	margin-bottom: 12px;
+}
+
+#order-items {
+	list-style: none;
+	padding: 0;
+	margin: 24px 0;
+}
+
+.order-item {
+	display: grid;
+	grid-template-columns: 64px minmax(0, 1fr);
+	gap: 16px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #e4d9ce;
+}
+
+.order-image {
+	width: 64px;
+	height: 64px;
+	object-fit: contain;
+	border-radius: 8px;
+}
+
+.order-details h2 {
+	margin: 0 0 4px;
+	font-size: 18px;
+}
+
+.order-details p {
+	margin: 0 0 8px;
+}
+
+.order-category {
+	color: #6f6058;
+	font-size: 14px;
+}
+
+.order-remove {
+	min-height: 14px;
+	padding: 8px 12px;
+	border: 1px solid #722f37;
+	border-radius: 6px;
+	background-color: #ffffff;
+	color: #722f37;
+	font: inherit;
+	cursor: pointer;
+}

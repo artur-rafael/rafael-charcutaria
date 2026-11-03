@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Rafael Charcutaria</title>
+
+		<link rel="stylesheet" href="style.css">
+		<script src="main.js" defer></script>
+	</head>
+
+	<body>
+		<header>
+			<p>Rafael Charcutaria</p>
+		</header>
+
+		<main>
+			<h1>Produtos tradicionais portugueses para o seu negócio.</h1>
+
+			<p>
+				Explore o nosso catálogo de enchidos e prepare
+				o seu pedido de forma simples.
+			</p>
+
+			<p>Escolha as quantidades e envie o seu pedido por WhatsApp ou e-mail.</p>
+			<p>Os preços, a disponibilidade e as condições de entrega serão confirmados posteriormente.</p>
+
+			<a class="button" href="#produtos">Ver produtos</a>
+			<a id="cart-link" class="button" href="cart.html">Rever pedido</a>
+
+			<section id="produtos">
+				<h2>Os nossos produtos</h2>
+
+				<div class="catalogue-search">
+					<label for="product-search">Pesquisar produtos</label>
+					<input
+						id="product-search"
+						type="search"
+						placeholder="Nome ou categoria"
+					>
+				</div>
+
+				<div
+					id="category-filters"
+					class="category-filters"
+					role="group"
+					aria-label="Categorias de produtos"
+				>
+					<button type="button" data-category="" aria-pressed=true>
+						Todos
+					</button>
+					<button type="button" data-category="Alheiras de Mirandela" aria-pressed=false>
+						Alheiras de Mirandela
+					</button>
+					<button type="button" data-category="Enchidos Saloios" aria-pressed=false>
+						Enchidos Saloios
+					</button>
+					<button type="button" data-category="Enchidos Beira-Baixa" aria-pressed=false>
+						Enchidos Beira-Baixa
+					</button>
+					<button type="button" data-category="Outros" aria-pressed=false>
+						Outros
+					</button>
+				</div>
+
+				<p id="catalogue-results" role="status"></p>
+
+				<p id="cart-feedback" role="status"></p>
+
+				<div class="product-grid">
+					<template id="product-card-template">
+						<article class="product-card">
+							<img width="1254" height="1254">
+
+							<p class="product-category"></p>
+							<h3></h3>
+
+							<fieldset class="product-formats">
+								<legend>Embalagem</legend>
+								<div class="format-options"></div>
+							</fieldset>
+
+							<div class="product-actions">
+								<div class="quantity-control">
+									<label for="quantidade-produto">Quantidade a adicionar</label>
+
+									<div class="quantity-stepper">
+										<button
+											class="quantity-button quantity-decrease"
+											type="button"
+											aria-label="Diminuir quantidade"
+										>
+											−
+										</button>
+
+										<input
+											id="quantidade-produto"
+											type="number"
+											min="1"
+											step="1"
+											value="1"
+											required
+										>
+
+										<button
+											class="quantity-button quantity-increase"
+											type="button"
+											aria-label="Aumentar quantidade"
+										>
+											+
+										</button>
+									</div>
+								</div>
+
+								<button
+									class="button add-to-cart"
+									type="button"
+									disabled
+								>
+									Adicionar ao pedido
+								</button>
+							</div>
+
+							<p class="product-feedback" role="status"></p>
+						</article>
+					</template>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<p>Rafael Charcutaria, Lda.</p>
+			<p>
+				Distribuição de enchidos e produtos de charcutaria
+				para estabelecimentos comerciais.
+			</p>
+		</footer>
+	</body>
+</html>
