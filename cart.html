@@ -71,6 +71,87 @@
 					</li>
 				</template>
 
+				<form id="order-form" class="order-form" hidden>
+					<h2>Os seus dados</h2>
+
+					<div class="form-field">
+						<label for="customer-name">
+							Nome ou estabelecimento
+						</label>
+
+						<input
+							id="customer-name"
+							name="customerName"
+							type="text"
+							autocomplete="organization"
+							placeholder="Ex.: Rafael Charcutaria"
+							required
+						>
+					</div>
+
+					<div class="form-field">
+						<label for="customer-locality">
+							Localidade
+						</label>
+
+						<input
+							id="customer-locality"
+							name="customerLocality"
+							autocomplete="address-level2"
+							placeholder="Ex.: Carnaxide"
+							required
+						>
+					</div>
+
+					<div class="form-field">
+						<label for="customer-notes">
+							Observações (opcional)
+						</label>
+
+						<textarea
+							id="customer-notes"
+							name="customerNotes"
+							rows="3"
+							placeholder="Ex.: Preferência por entrega na quinta-feira."
+						></textarea>
+					</div>
+
+					<label class="remember-details">
+						<input id="remember-details" type="checkbox">
+
+						<span>
+							Guardar nome e localidade neste dispositivo para próximos pedidos.
+						</span>
+					</label>
+
+					<p>
+						Os preços, a disponibilidade e as condições de entrega
+						serão confirmados após a recepção do pedido.
+					</p>
+
+					<div class="checkout-actions">
+						<button
+							class="button"
+							type="submit"
+							name="channel"
+							value="whatsapp"
+							disabled
+						>
+							Continuar no WhatsApp
+						</button>
+
+						<button
+							class="button"
+							type="submit"
+							name="channel"
+							value="email"
+							disabled
+						>
+							Preparar Email
+						</button>
+					</div>
+				</form>
+
 				<a class="button" href="index.html#produtos">
 					Continuar a escolher produtos
 				</a>

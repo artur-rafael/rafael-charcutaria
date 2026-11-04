@@ -10,6 +10,7 @@ const orderItems = document.querySelector("#order-items");
 const orderEmpty = document.querySelector("#order-empty");
 const orderTemplate = document.querySelector("#order-item-template");
 const orderHeading = document.querySelector("#order-heading");
+const orderForm = document.querySelector("#order-form");
 
 function loadCart() {
 	try {
@@ -150,7 +151,7 @@ function renderOrder() {
 			const quantity = quantityInput.valueAsNumber;
 
 			if (!quantityInput.reportValidity() ||
-				 !Number.isSafeInteger(quantity)) {
+				!Number.isSafeInteger(quantity)) {
 				quantityInput.value = item.quantity;
 				feedback.textContent =
 					"Introduza uma quantidade inteira igual ou superior a 1.";
@@ -214,6 +215,9 @@ function renderOrder() {
 	});
 
 	orderEmpty.hidden = orderItems.children.length > 0;
+	if (orderForm) {
+		orderForm.hidden = orderItems.children.length === 0;
+	}
 }
 
 
@@ -405,6 +409,66 @@ function setupFilters() {
 	applyFilters();
 }
 
+function setupRememberDetails() {
+	if (!orderForm) {
+		return;
+	}
+
+	const storageKey = "catalogue-customer";
+	const nameInput = orderForm.querySelector("#customer-name");
+	const localityInput = orderForm.querySelector("#customer-locality");
+	const remember = orderForm.querySelector("#remember-details");
+
+	try {
+		const saved = JSON.parse(localStorage.getItem(storageKey));
+
+		if (saved &&
+			typeof saved.name === "string" &&
+			typeof saved.locality === "string") {
+			nameInput.value = saved.name;
+			localityInput.value = saved.locality;
+			remember.checked = true;
+		}
+	} catch (error) {
+		console.warn("Não foi possível recuperar os dados guardados.", error);
+	}
+
+	function updateSavedDetails() {
+		try {
+			if (!remember.checked) {
+				localStorage.removeItem(storageKey);
+				return;
+			}
+
+			const details = {
+				name: nameInput.value.trim(),
+				locality: localityInput.value.trim()
+			};
+
+			localStorage.setItem(
+				storageKey,
+				JSON.stringify(details)
+			);
+		} catch (error) {
+			feedback.textContent =
+				"Não foi possível atualizar os dados guardados neste navegador.";
+			console.warn(error);
+		}
+	}
+
+	remember.addEventListener("change", updateSavedDetails);
+
+	[nameInput, localityInput].forEach((input) => {
+		input.addEventListener("change", () => {
+			if (remember.checked) {
+				updateSavedDetails();
+			}
+		});
+	});
+
+	orderForm.addEventListener("submit", updateSavedDetails);
+}
+
 async function loadProducts() {
 	feedback.textContent = "A carregar o catálogo…";
 
@@ -429,6 +493,7 @@ async function loadProducts() {
 
 		renderOrder();
 		feedback.textContent = "";
+		setupRememberDetails();
 	} catch (error) {
 		feedback.textContent =
 			"Não foi possível carregar o catálogo. Atualize a página para tentar novamente.";
