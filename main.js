@@ -93,7 +93,7 @@ function describeOrderItem(product, format, quantity) {
 
 function renderOrder() {
 	if (cartLink) {
-		cartLink.textContent = `Rever pedido (${cart.length})`;
+		cartLink.textContent = `Pedido (${cart.length})`;
 	}
 
 	if (!orderItems || !orderEmpty || !orderTemplate) {

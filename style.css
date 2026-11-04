@@ -43,6 +43,66 @@ h1 {
 	cursor: default;
 }
 
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 12px 16px;
+	background-color: #faf7f2;
+	border-bottom: 1px solid #e4d9ce;
+}
+
+.site-brand {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	min-width: 0;
+	color: #302821;
+	font-weight: 700;
+	line-height: 1.2;
+	text-decoration: none;
+}
+
+.brand-mark {
+	display: grid;
+	place-items: center;
+	width: 36px;
+	height: 36px;
+	flex-shrink: 0;
+	border-radius: 50%;
+	background-color: #722f37;
+	color: #ffffff;
+}
+
+.header-cart {
+	display: inline-flex;
+	align-items: center;
+	min-height: 48px;
+	box-sizing: border-box;
+	padding: 10px 12px;
+	flex-shrink: 0;
+	white-space: nowrap;
+}
+
+.header-cart[aria-current="page"] {
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+
+.site-brand:focus-visible {
+	outline: 3px solid #722f37;
+	outline-offset: 4px;
+}
+
+#produtos,
+#pedido {
+	scroll-margin-top: 96px;
+}
+
 .catalogue-search {
 	margin: 16px 0;
 }
