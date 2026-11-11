@@ -1,5 +1,10 @@
 const CART_STORAGE_KEY = "catalogue-cart-v2";
 
+const BUSINESS_CONTACT = {
+	whatsapp: "351969069616",
+	email: "pedidos@rafaelcharcutaria.pt"
+};
+
 let products = [];
 
 const cartLink = document.querySelector("#cart-link");
@@ -469,6 +474,120 @@ function setupRememberDetails() {
 	orderForm.addEventListener("submit", updateSavedDetails);
 }
 
+function readCustomerDetails() {
+	const formData = new FormData(orderForm);
+	return {
+		name: formData.get("customerName").trim(),
+		locality: formData.get("customerLocality").trim(),
+		notes: formData.get("customerNotes").trim()
+	}
+}
+
+function buildOrderMessage(details) {
+	const lines = [
+		"Olá! Gostaria de fazer o seguinte pedido:",
+		"",
+		`Cliente: ${details.name}`,
+		`Localidade: ${details.locality}`,
+		"",
+		"Produtos:"
+	];
+
+	cart.forEach((item) => {
+		const product = products.find((entry) => {
+			return entry.id === item.productId;
+		});
+		if (!product) {
+			return;
+		}
+
+		const format = product.formats.find((entry) => {
+			return entry.id === item.formatId;
+		});
+		if (!format) {
+			return;
+		}
+
+		lines.push(`- ${describeOrderItem(product, format, item.quantity)}`);
+	});
+
+	if (details.notes) {
+		lines.push("", `Observações: ${details.notes}`);
+	}
+
+	lines.push("", "Aguardo confirmação. Obrigado!");
+	return lines.join("\n");
+}
+
+function setupCheckout() {
+	if (!orderForm) {
+		return;
+	}
+
+	const buttons = orderForm.querySelectorAll('button[name="channel"]');
+	buttons.forEach((button) => {
+		button.disabled = !BUSINESS_CONTACT[button.value];
+	});
+
+	orderForm.addEventListener("submit", (event) => {
+		event.preventDefault();
+
+		if (!orderForm.reportValidity()) {
+			return;
+		}
+
+		if (cart.length === 0) {
+			feedback.textContent = "Adicione produtos antes de preparar o pedido.";
+			return;
+		}
+
+		const details = readCustomerDetails();
+		if (!details.name || !details.locality) {
+			feedback.textContent = "Preencha o nome e a localidade.";
+
+			let field;
+			if (details.name) {
+				field = "#customer-locality";
+			} else {
+				field = "#customer-name";
+			}
+			orderForm.querySelector(field).focus();
+			return;
+		}
+
+		let channel;
+		if (event.submitter) {
+			channel = event.submitter.value;
+		} else {
+			channel = "whatsapp";
+		}
+
+		const destination = BUSINESS_CONTACT[channel];
+		if (!destination) {
+			feedback.textContent = "Este meio de contacto ainda não está configurado.";
+			return;
+		}
+
+		const message = buildOrderMessage(details);
+
+		if (channel === "whatsapp") {
+			const text = encodeURIComponent(message);
+
+			window.location.href =
+				`https://wa.me/${destination}?text=${text}`;
+		} else if (channel === "email") {
+			const subject = encodeURIComponent(
+				"Pedido - Rafael Charcutaria"
+			);
+
+			const body = encodeURIComponent(message.replace(/\r?\n/g, "\r\n"));
+
+			window.location.href =
+				`mailto:${destination}?subject=${subject}&body=${body}`;
+		}
+	});
+}
+
 async function loadProducts() {
 	feedback.textContent = "A carregar o catálogo…";
 
@@ -494,6 +613,7 @@ async function loadProducts() {
 		renderOrder();
 		feedback.textContent = "";
 		setupRememberDetails();
+		setupCheckout();
 	} catch (error) {
 		feedback.textContent =
 			"Não foi possível carregar o catálogo. Atualize a página para tentar novamente.";

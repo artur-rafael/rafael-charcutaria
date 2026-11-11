@@ -402,3 +402,15 @@ label.format-option {
 	flex-wrap: wrap;
 	gap: 12px;
 }
+
+.checkout-actions .button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+}
+
+.button-icon {
+	display: block;
+	flex-shrink: 0;
+}
