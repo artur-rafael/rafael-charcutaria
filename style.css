@@ -9,6 +9,9 @@ body {
 header,
 main,
 footer {
+	box-sizing: border-box;
+	max-width: 1200px;
+	margin-inline: auto;
 	padding: 24px;
 }
 
