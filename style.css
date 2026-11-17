@@ -417,3 +417,33 @@ label.format-option {
 	display: block;
 	flex-shrink: 0;
 }
+
+.site-footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 24px;
+	margin-top: 48px;
+	border-top: 1px solid #e4d9ce;
+	color: #6f6058;
+	font-size: 14px;
+}
+
+.site-footer p {
+	margin: 0 0 8px;
+}
+
+.footer-name {
+	color: #302821;
+	font-weight: 700;
+}
+
+.site-footer a {
+	color: #722f37;
+	text-underline-offset: 4px;
+}
+
+.site-footer a:focus-visible {
+	outline: 3px solid #722f37;
+	outline-offset: 4px;
+}
