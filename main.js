@@ -667,6 +667,10 @@ async function loadProducts() {
 		feedback.textContent =
 			"Não foi possível carregar o catálogo. Atualize a página para tentar novamente.";
 		console.error("Erro ao carregar os produtos:", error);
+	} finally {
+		if (grid) {
+			grid.classList.remove("is-loading");
+		}
 	}
 }
 

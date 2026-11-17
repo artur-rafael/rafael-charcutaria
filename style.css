@@ -154,6 +154,11 @@ h1 {
 	outline-offset: 3px;
 }
 
+#catalogue-results,
+#cart-feedback {
+	min-height: 1.6em;
+}
+
 .product-card[hidden] {
 	display:none;
 }
@@ -162,6 +167,11 @@ h1 {
 	display: grid;
 	gap: 24px;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* Reserve space so the footer doesn't appear before the catalogue loads. */
+.product-grid.is-loading {
+	min-height: 100vh;
 }
 
 .product-card {
