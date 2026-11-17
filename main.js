@@ -255,6 +255,12 @@ function renderProducts() {
 		const addButton = card.querySelector(".add-to-cart");
 		const cardFeedback = card.querySelector(".product-feedback");
 
+		let feedbackTimer;
+		function resetAddButton() {
+			clearTimeout(feedbackTimer);
+			addButton.textContent = "Adicionar ao pedido";
+		}
+
 		card.querySelector(".product-category").textContent = product.category;
 		card.querySelector("h3").textContent = product.name;
 
@@ -270,7 +276,9 @@ function renderProducts() {
 			image.src = selectedFormat.image;
 			image.alt = selectedFormat.imageAlt;
 			addButton.setAttribute("aria-label", `Adicionar ${product.name}, ${selectedFormat.label}, ao pedido`);
+			resetAddButton();
 			cardFeedback.textContent = "";
+			cardFeedback.classList.remove("is-success");
 			input.value = 1;
 			decrease.disabled = true;
 		}
@@ -323,6 +331,10 @@ function renderProducts() {
 				return;
 			}
 
+			resetAddButton();
+			cardFeedback.classList.remove("is-success");
+			cardFeedback.textContent = "";
+
 			const quantity = input.valueAsNumber;
 			const total = addToCart(product.id, selectedFormat.id, quantity);
 
@@ -335,13 +347,18 @@ function renderProducts() {
 
 			renderOrder();
 
-			cardFeedback.textContent =
-				`No pedido: ${describeOrderItem(product, selectedFormat, total)}.`;
+			addButton.textContent = "Adicionado ✓";
 
-			if (!saved) {
-				cardFeedback.textContent +=
-					" Não foi possível guardar o pedido para a próxima visita.";
+			if (saved) {
+				cardFeedback.classList.add("is-success");
+				cardFeedback.textContent =
+					`No pedido: ${describeOrderItem(product, selectedFormat, total)}.`;
+			} else {
+				cardFeedback.textContent =
+					"Produto adicionado. Não foi possível guardar o pedido para a próxima visita.";
 			}
+
+			feedbackTimer = setTimeout(resetAddButton, 1500);
 
 			input.value = 1;
 			updateQuantity();
