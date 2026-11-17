@@ -7,13 +7,13 @@
 			{
 				"id": "alheira-corrente-7-unidades",
 				"label": "7 unidades",
-				"image": "images/alheira-corrente-7-unidades.png",
+				"image": "images/alheira-corrente-7-unidades.webp",
 				"imageAlt": "Embalagem de sete alheiras correntes"
 			},
 			{
 				"id": "alheira-corrente-2-unidades",
 				"label": "2 unidades",
-				"image": "images/alheira-corrente-2-unidades.png",
+				"image": "images/alheira-corrente-2-unidades.webp",
 				"imageAlt": "Embalagem de duas alheiras correntes"
 			}
 		]
@@ -26,13 +26,13 @@
 			{
 				"id": "alheira-extra-7-unidades",
 				"label": "7 unidades",
-				"image": "images/alheira-extra-7-unidades.png",
+				"image": "images/alheira-extra-7-unidades.webp",
 				"imageAlt": "Embalagem de sete alheiras extra"
 			},
 			{
 				"id": "alheira-extra-2-unidades",
 				"label": "2 unidades",
-				"image": "images/alheira-extra-2-unidades.png",
+				"image": "images/alheira-extra-2-unidades.webp",
 				"imageAlt": "Embalagem de duas alheiras extra"
 			}
 		]
@@ -45,7 +45,7 @@
 			{
 				"id": "alheira-caca-2-unidades",
 				"label": "2 unidades",
-				"image": "images/alheira-caca-2-unidades.png",
+				"image": "images/alheira-caca-2-unidades.webp",
 				"imageAlt": "Embalagem de duas alheiras caça"
 			}
 		]
@@ -58,7 +58,7 @@
 			{
 				"id": "alheira-vegetariana-1-unidade",
 				"label": "1 unidade",
-				"image": "images/alheira-vegetariana-1-unidade.png",
+				"image": "images/alheira-vegetariana-1-unidade.webp",
 				"imageAlt": "Embalagem de uma alheira vegetariana"
 			}
 		]
@@ -71,13 +71,13 @@
 			{
 				"id": "chourico-corrente-6-unidades",
 				"label": "6 unidades",
-				"image": "images/chourico-corrente-6-unidades.png",
+				"image": "images/chourico-corrente-6-unidades.webp",
 				"imageAlt": "Embalagem de seis chouriços corrente"
 			},
 			{
 				"id": "chourico-corrente-2-unidades",
 				"label": "2 unidades",
-				"image": "images/chourico-corrente-2-unidades.png",
+				"image": "images/chourico-corrente-2-unidades.webp",
 				"imageAlt": "Embalagem de dois chouriços corrente"
 			}
 		]
@@ -90,7 +90,7 @@
 			{
 				"id": "chourico-argola-em-conta-6-unidades",
 				"label": "6 unidades",
-				"image": "images/chourico-argola-em-conta-6-unidades.png",
+				"image": "images/chourico-argola-em-conta-6-unidades.webp",
 				"imageAlt": "Embalagem de seis chouriços argola em conta"
 			}
 		]
@@ -103,13 +103,13 @@
 			{
 				"id": "chourico-argola-extra-6-unidades",
 				"label": "6 unidades",
-				"image": "images/chourico-argola-extra-6-unidades.png",
+				"image": "images/chourico-argola-extra-6-unidades.webp",
 				"imageAlt": "Embalagem de seis chouriços argola extra"
 			},
 			{
 				"id": "chourico-argola-extra-1-unidade",
 				"label": "1 unidade",
-				"image": "images/chourico-argola-extra-1-unidade.png",
+				"image": "images/chourico-argola-extra-1-unidade.webp",
 				"imageAlt": "Embalagem de um chouriço argola extra"
 			}
 		]
@@ -122,13 +122,13 @@
 			{
 				"id": "farinheira-saloios-15-unidades",
 				"label": "15 unidades",
-				"image": "images/farinheira-saloios-15-unidades.png",
+				"image": "images/farinheira-saloios-15-unidades.webp",
 				"imageAlt": "Embalagem de quinze farinheiras (saloios)"
 			},
 			{
 				"id": "farinheira-saloios-1-unidade",
 				"label": "1 unidade",
-				"image": "images/farinheira-saloios-1-unidade.png",
+				"image": "images/farinheira-saloios-1-unidade.webp",
 				"imageAlt": "Embalagem de uma farinheira (saloio)"
 			}
 		]
@@ -141,13 +141,13 @@
 			{
 				"id": "morcela-fina-6-unidades",
 				"label": "6 unidades",
-				"image": "images/morcela-fina-6-unidades.png",
+				"image": "images/morcela-fina-6-unidades.webp",
 				"imageAlt": "Embalagem de seis morcelas finas"
 			},
 			{
 				"id": "morcela-fina-1-unidade",
 				"label": "1 unidade",
-				"image": "images/morcela-fina-1-unidade.png",
+				"image": "images/morcela-fina-1-unidade.webp",
 				"imageAlt": "Embalagem de uma morcela fina"
 			}
 		]
@@ -160,13 +160,13 @@
 			{
 				"id": "chourico-mouro-6-unidades",
 				"label": "6 unidades",
-				"image": "images/chourico-mouro-6-unidades.png",
+				"image": "images/chourico-mouro-6-unidades.webp",
 				"imageAlt": "Embalagem de seis chouriços mouros"
 			},
 			{
 				"id": "chourico-mouro-1-unidade",
 				"label": "1 unidade",
-				"image": "images/chourico-mouro-1-unidade.png",
+				"image": "images/chourico-mouro-1-unidade.webp",
 				"imageAlt": "Embalagem de um chouriço mouro"
 			}
 		]
@@ -179,13 +179,13 @@
 			{
 				"id": "morcela-grossa-6-unidades",
 				"label": "6 unidades",
-				"image": "images/morcela-grossa-6-unidades.png",
+				"image": "images/morcela-grossa-6-unidades.webp",
 				"imageAlt": "Embalagem de seis morcelas grossas"
 			},
 			{
 				"id": "morcela-grossa-1-unidade",
 				"label": "1 unidade",
-				"image": "images/morcela-grossa-1-unidade.png",
+				"image": "images/morcela-grossa-1-unidade.webp",
 				"imageAlt": "Embalagem de uma morcela grossa"
 			}
 		]
@@ -198,13 +198,13 @@
 			{
 				"id": "chourico-sangue-8-unidades",
 				"label": "8 unidades",
-				"image": "images/chourico-sangue-8-unidades.png",
+				"image": "images/chourico-sangue-8-unidades.webp",
 				"imageAlt": "Embalagem de oito chouriços de sangue"
 			},
 			{
 				"id": "chourico-sangue-2-unidades",
 				"label": "2 unidades",
-				"image": "images/chourico-sangue-2-unidades.png",
+				"image": "images/chourico-sangue-2-unidades.webp",
 				"imageAlt": "Embalagem de dois chouriços de sangue"
 			}
 		]
@@ -217,7 +217,7 @@
 			{
 				"id": "salsicha-churrasco-6-unidades",
 				"label": "6 unidades",
-				"image": "images/salsicha-churrasco-6-unidades.png",
+				"image": "images/salsicha-churrasco-6-unidades.webp",
 				"imageAlt": "Embalagem de seis salsichas para churrasco"
 			}
 		]
@@ -230,7 +230,7 @@
 			{
 				"id": "chouricao-extra-1-unidade",
 				"label": "1 unidade",
-				"image": "images/chouricao-extra-1-unidade.png",
+				"image": "images/chouricao-extra-1-unidade.webp",
 				"imageAlt": "Embalagem de uma metade de um chourição extra"
 			}
 		]
@@ -243,7 +243,7 @@
 			{
 				"id": "pernil-fumado-1-unidade",
 				"label": "1 unidade",
-				"image": "images/pernil-fumado-1-unidade.png",
+				"image": "images/pernil-fumado-1-unidade.webp",
 				"imageAlt": "Embalagem de um pernil fumado"
 			}
 		]
@@ -256,7 +256,7 @@
 			{
 				"id": "cabeca-fumada-1-unidade",
 				"label": "1 unidade",
-				"image": "images/cabeca-fumada-1-unidade.png",
+				"image": "images/cabeca-fumada-1-unidade.webp",
 				"imageAlt": "Embalagem de uma cabeça fumada"
 			}
 		]
@@ -269,7 +269,7 @@
 			{
 				"id": "linguica-extra-300g",
 				"label": "300 g",
-				"image": "images/linguica-extra-300g.png",
+				"image": "images/linguica-extra-300g.webp",
 				"imageAlt": "Embalagem de 300 g de linguiça extra"
 			}
 		]
@@ -282,7 +282,7 @@
 			{
 				"id": "sortido-mini-enchidos-150g",
 				"label": "150 g",
-				"image": "images/sortido-mini-enchidos-150g.png",
+				"image": "images/sortido-mini-enchidos-150g.webp",
 				"imageAlt": "Embalagem de 150 g de um sortido de mini enchidos"
 			}
 		]
@@ -295,7 +295,7 @@
 			{
 				"id": "torresmos-barra-1-unidade",
 				"label": "1 unidade",
-				"image": "images/torresmos-barra-1-unidade.png",
+				"image": "images/torresmos-barra-1-unidade.webp",
 				"imageAlt": "Embalagem de um torresmo barra"
 			}
 		]
@@ -308,7 +308,7 @@
 			{
 				"id": "torresmos-pipoca-100g",
 				"label": "100 g",
-				"image": "images/torresmos-pipoca-100g.png",
+				"image": "images/torresmos-pipoca-100g.webp",
 				"imageAlt": "Embalagem de 100 g de torresmo pipoca"
 			}
 		]
@@ -321,7 +321,7 @@
 			{
 				"id": "bacon-fumado-prensado-1-unidade",
 				"label": "1 unidade",
-				"image": "images/bacon-fumado-prensado-1-unidade.png",
+				"image": "images/bacon-fumado-prensado-1-unidade.webp",
 				"imageAlt": "Embalagem de um bacon fumado prensado"
 			}
 		]
@@ -334,7 +334,7 @@
 			{
 				"id": "bacon-fumado-em-conta-1-unidade",
 				"label": "1 unidade",
-				"image": "images/bacon-fumado-em-conta-1-unidade.png",
+				"image": "images/bacon-fumado-em-conta-1-unidade.webp",
 				"imageAlt": "Embalagem de um bacon fumado em conta"
 			}
 		]
@@ -347,13 +347,13 @@
 			{
 				"id": "bacon-fumado-extra-metade-1-unidade",
 				"label": "1 metade",
-				"image": "images/bacon-fumado-extra-metade-1-unidade.png",
+				"image": "images/bacon-fumado-extra-metade-1-unidade.webp",
 				"imageAlt": "Embalagem de uma metade de bacon fumado extra"
 			},
 			{
 				"id": "bacon-fumado-extra-tiras-1-unidade",
 				"label": "tiras",
-				"image": "images/bacon-fumado-extra-tiras-1-unidade.png",
+				"image": "images/bacon-fumado-extra-tiras-1-unidade.webp",
 				"imageAlt": "Embalagem de tiras de bacon fumado extra"
 			}
 		]
@@ -366,19 +366,19 @@
 			{
 				"id": "banha-230g",
 				"label": "230 g",
-				"image": "images/banha-230g.png",
+				"image": "images/banha-230g.webp",
 				"imageAlt": "Embalagem de 230 g de banha"
 			},
 			{
 				"id": "banha-900g",
 				"label": "900 g",
-				"image": "images/banha-900g.png",
+				"image": "images/banha-900g.webp",
 				"imageAlt": "Embalagem de 900 g de banha"
 			},
 			{
 				"id": "banha-4800",
 				"label": "4800 g",
-				"image": "images/banha-4800g.png",
+				"image": "images/banha-4800g.webp",
 				"imageAlt": "Embalagem de 4800 g de banha"
 			}
 		]
@@ -391,13 +391,13 @@
 			{
 				"id": "farinheira-beira-baixa-8-unidades",
 				"label": "8 unidades",
-				"image": "images/farinheira-beira-baixa-8-unidades.png",
+				"image": "images/farinheira-beira-baixa-8-unidades.webp",
 				"imageAlt": "Embalagem de oito farinheiras (beira-baixa)"
 			},
 			{
 				"id": "farinheira-beira-baixa-1-unidade",
 				"label": "1 unidade",
-				"image": "images/farinheira-beira-baixa-1-unidade.png",
+				"image": "images/farinheira-beira-baixa-1-unidade.webp",
 				"imageAlt": "Embalagem de uma farinheira (beira-baixa)"
 			}
 		]
@@ -410,13 +410,13 @@
 			{
 				"id": "chourico-extra-beira-baixa-8-unidades",
 				"label": "8 unidades",
-				"image": "images/chourico-extra-beira-baixa-8-unidades.png",
+				"image": "images/chourico-extra-beira-baixa-8-unidades.webp",
 				"imageAlt": "Embalagem de oito chouriços extra (beira-baixa)"
 			},
 			{
 				"id": "chourico-extra-beira-baixa-1-unidade",
 				"label": "1 unidade",
-				"image": "images/chourico-extra-beira-baixa-1-unidade.png",
+				"image": "images/chourico-extra-beira-baixa-1-unidade.webp",
 				"imageAlt": "Embalagem de um chouriço extra (beira-baixa)"
 			}
 		]
@@ -429,7 +429,7 @@
 			{
 				"id": "morcela-arroz-beira-baixa-1-unidade",
 				"label": "1 unidade",
-				"image": "images/morcela-arroz-beira-baixa-1-unidade.png",
+				"image": "images/morcela-arroz-beira-baixa-1-unidade.webp",
 				"imageAlt": "Embalagem de uma morcela com arroz (beira-baixa)"
 			}
 		]
@@ -442,7 +442,7 @@
 			{
 				"id": "painho-beira-baixa-1-unidade",
 				"label": "1 unidade",
-				"image": "images/painho-beira-baixa-1-unidade.png",
+				"image": "images/painho-beira-baixa-1-unidade.webp",
 				"imageAlt": "Embalagem de um painho (beira-baixa)"
 			}
 		]
@@ -455,7 +455,7 @@
 			{
 				"id": "salpicao-beira-baixa-1-unidade",
 				"label": "1 unidade",
-				"image": "images/salpicao-beira-baixa-1-unidade.png",
+				"image": "images/salpicao-beira-baixa-1-unidade.webp",
 				"imageAlt": "Embalagem de um salpicão (beira-baixa)"
 			}
 		]
@@ -468,7 +468,7 @@
 			{
 				"id": "paiola-beira-baixa-1-unidade",
 				"label": "1 unidade",
-				"image": "images/paiola-beira-baixa-1-unidade.png",
+				"image": "images/paiola-beira-baixa-1-unidade.webp",
 				"imageAlt": "Embalagem de uma paiola (beira-baixa)"
 			}
 		]
@@ -481,7 +481,7 @@
 			{
 				"id": "toucinho-beira-baixa-1-unidade",
 				"label": "1 unidade",
-				"image": "images/toucinho-beira-baixa-1-unidade.png",
+				"image": "images/toucinho-beira-baixa-1-unidade.webp",
 				"imageAlt": "Embalagem de um toucinho (beira-baixa)"
 			}
 		]
@@ -494,7 +494,7 @@
 			{
 				"id": "entremeada-beira-baixa-1-unidade",
 				"label": "tiras",
-				"image": "images/entremeada-beira-baixa-1-unidade.png",
+				"image": "images/entremeada-beira-baixa-1-unidade.webp",
 				"imageAlt": "Embalagem de uma entremeada (beira-baixa)"
 			}
 		]
@@ -507,19 +507,19 @@
 			{
 				"id": "presunto-beira-baixa-150g",
 				"label": "laminado · 150g",
-				"image": "images/presunto-beira-baixa-150g.png",
+				"image": "images/presunto-beira-baixa-150g.webp",
 				"imageAlt": "Embalagem de 150g de presunto (beira-baixa)"
 			},
 			{
 				"id": "presunto-beira-baixa-fatias",
 				"label": "fatias",
-				"image": "images/presunto-beira-baixa-fatias.png",
+				"image": "images/presunto-beira-baixa-fatias.webp",
 				"imageAlt": "Embalagem de presunto fatias (beira-baixa)"
 			},
 			{
 				"id": "presunto-beira-baixa-quartos",
 				"label": "1 quarto",
-				"image": "images/presunto-beira-baixa-quartos.png",
+				"image": "images/presunto-beira-baixa-quartos.webp",
 				"imageAlt": "Embalagem de presunto quartos (beira-baixa)"
 			}
 		]
@@ -532,7 +532,7 @@
 			{
 				"id": "fiambre-perna-unidade",
 				"label": "1 unidade",
-				"image": "images/fiambre-perna.png",
+				"image": "images/fiambre-perna.webp",
 				"imageAlt": "Embalagem de fiambre perna"
 			}
 		]
@@ -545,7 +545,7 @@
 			{
 				"id": "queijo-flamengo-unidade",
 				"label": "1 unidade",
-				"image": "images/queijo-flamengo.png",
+				"image": "images/queijo-flamengo.webp",
 				"imageAlt": "Embalagem de queijo flamengo"
 			}
 		]
