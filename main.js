@@ -13,6 +13,7 @@ const template = document.querySelector("#product-card-template");
 const feedback = document.querySelector("#cart-feedback");
 const orderItems = document.querySelector("#order-items");
 const orderEmpty = document.querySelector("#order-empty");
+const clearOrderButton = document.querySelector("#clear-order");
 const orderTemplate = document.querySelector("#order-item-template");
 const orderHeading = document.querySelector("#order-heading");
 const orderForm = document.querySelector("#order-form");
@@ -222,6 +223,10 @@ function renderOrder() {
 	orderEmpty.hidden = orderItems.children.length > 0;
 	if (orderForm) {
 		orderForm.hidden = orderItems.children.length === 0;
+	}
+
+	if (clearOrderButton) {
+		clearOrderButton.hidden = cart.length === 0;
 	}
 }
 
@@ -584,6 +589,33 @@ function setupCheckout() {
 
 			window.location.href =
 				`mailto:${destination}?subject=${subject}&body=${body}`;
+		}
+	});
+}
+
+if (clearOrderButton) {
+	clearOrderButton.addEventListener("click", () => {
+		const confirmed = window.confirm(
+			"Pretende remover todos os produtos do pedido?"
+		);
+
+		if (!confirmed) {
+			return;
+		}
+
+		cart.splice(0, cart.length);
+
+		const saved = saveCart();
+		renderOrder();
+
+		feedback.textContent = "Pedido limpo.";
+
+		if (!saved) {
+			feedback.textContent += " Não foi possível guardar a alteração neste navegador.";
+		}
+
+		if (orderHeading) {
+			orderHeading.focus();
 		}
 	});
 }
