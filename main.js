@@ -205,7 +205,7 @@ function renderOrder() {
 				`${product.name} - ${format.label}: removido do pedido.`;
 
 			if (!saved) {
-				feedback.textContent = " Não foi possivel guardar alteração neste navegador.";
+				feedback.textContent = " Não foi possível guardar alteração neste navegador.";
 			}
 
 			const remainingButtons = orderItems.querySelectorAll(".order-remove");
